@@ -1,3 +1,7 @@
-export const App = () => {
-  return <h1>hello</h1>;
+import Hero from "./components/hero";
+
+const App = () => {
+  return <Hero />;
 };
+
+export default App;
