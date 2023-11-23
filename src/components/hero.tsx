@@ -6,12 +6,32 @@ import paper4 from "../images/paper4.png";
 
 const Hero = () => {
   return (
-    <div>
-      <img src={typewriter} />
-      <img src={paper1} />
-      <img src={paper2} />
-      <img src={paper3} />
-      <img src={paper4} />
+    <div className="relative justify-center">
+      <img
+        className="absolute top-0 left-1/2 transform -translate-x-1/2"
+        src={typewriter}
+        alt="typewriter sketch"
+      />
+      <img
+        className="absolute top-0 left-1/2 transform -translate-x-1/2"
+        src={paper1}
+        alt="crumpled paper sketch"
+      />
+      <img
+        className="absolute top-0 left-1/2 transform -translate-x-1/2"
+        src={paper2}
+        alt="crumpled paper sketch"
+      />
+      <img
+        className="absolute top-0 left-1/2 transform -translate-x-1/2"
+        src={paper3}
+        alt="crumpled paper sketch"
+      />
+      <img
+        className="absolute top-0 left-1/2 transform -translate-x-1/2"
+        src={paper4}
+        alt="crumpled paper sketch"
+      />
     </div>
   );
 };
