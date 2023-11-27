@@ -23,27 +23,32 @@ const Hero = () => {
   }, [parallaxController]);
 
   return (
-    <div>
-      <div
-        className="relative flex justify-center items-center"
-        style={{ height: "620px" }}
-      >
-        <div ref={parallax0.ref} className="absolute">
-          <img src={typewriter} alt="typewriter sketch" />
-        </div>
-        <div ref={parallax1.ref} className="absolute">
-          <img src={paper1} alt="crumpled paper sketch" />
-        </div>
-        <div ref={parallax2.ref} className="absolute">
-          <img src={paper2} alt="crumpled paper sketch" />
-        </div>
-        <div ref={parallax3.ref} className="absolute">
-          <img src={paper3} alt="crumpled paper sketch" />
-        </div>
-        <div ref={parallax4.ref} className="absolute">
-          <img src={paper4} alt="crumpled paper sketch" />
-        </div>
+    <div
+      className="relative flex justify-center items-center "
+      style={{ height: "620px" }}
+    >
+      <div ref={parallax0.ref} className="absolute">
+        <img src={typewriter} alt="typewriter sketch" />
       </div>
+      <div ref={parallax1.ref} className="absolute">
+        <img src={paper1} alt="crumpled paper sketch" />
+      </div>
+      <div ref={parallax2.ref} className="absolute">
+        <img src={paper2} alt="crumpled paper sketch" />
+      </div>
+      <div ref={parallax3.ref} className="absolute">
+        <img src={paper3} alt="crumpled paper sketch" />
+      </div>
+      <div ref={parallax4.ref} className="absolute">
+        <img src={paper4} alt="crumpled paper sketch" />
+      </div>
+      <h1 className="z-10 text-4xl tracking-wide font-libre font-bold -mt-80 pb-8 text-center leading-10">
+        Parallax
+        <br />
+        and
+        <br />
+        Accessibility
+      </h1>
     </div>
   );
 };
