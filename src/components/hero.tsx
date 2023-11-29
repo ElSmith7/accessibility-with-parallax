@@ -32,7 +32,7 @@ const Hero = () => {
       <div ref={parallax4.ref} className="absolute">
         <img src={paper4} alt="crumpled paper sketch" />
       </div>
-      <h1 className="z-10 text-4xl tracking-wide font-libre font-bold -mt-80 pb-8 text-center leading-10">
+      <h1 className="z-10 text-4xl tracking-wide font-elite font-bold -mt-80 pb-8 text-center leading-10">
         Parallax
         <br />
         and

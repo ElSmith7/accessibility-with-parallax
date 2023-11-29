@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         arimo: ["Arimo", "sans-serif"],
-        libre: ["Libre Baskerville", "sans-serif"],
+        elite: ["Special Elite", "sans-serif"],
       },
     },
   },
