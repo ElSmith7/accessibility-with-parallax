@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useParallaxController } from "react-scroll-parallax";
 import { useParallax } from "react-scroll-parallax";
 import typewriter from "../images/typewriter.png";
 import paper1 from "../images/paper1.png";
@@ -13,14 +11,6 @@ const Hero = () => {
   const parallax2 = useParallax<HTMLDivElement>({ speed: 5 });
   const parallax3 = useParallax<HTMLDivElement>({ speed: 12 });
   const parallax4 = useParallax<HTMLDivElement>({ speed: 15 });
-
-  const parallaxController = useParallaxController();
-
-  useEffect(() => {
-    if (parallaxController) {
-      parallaxController.update();
-    }
-  }, [parallaxController]);
 
   return (
     <div
