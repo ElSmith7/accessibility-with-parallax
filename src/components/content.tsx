@@ -109,12 +109,28 @@ const Content = () => {
               </li>
               <li>
                 And of course, provide a clear way to disable animations and
-                effects. Give the user control of their experience.
+                effects. Give the user control of their experience because after
+                all, some would still much rather interact with a static UI.
               </li>
             </ul>
-            <br />
-            These are just some ideas that will help when coding and designing
-            parallax websites with accessibility in mind.
+          </p>
+        </div>
+      </div>
+      <Parallax speed={20}>
+        <img className="w-full -mt-44 z-5" src={light_tear} alt="paper tear" />
+        <div className=" p-28 bg-white" />
+      </Parallax>
+      <div className="relative z-6 -mt-44 pt-32 pb-72">
+        <div className="font-arimo mx-36">
+          <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
+            In Conclusion
+          </h1>
+          <br />
+          <p className="text-lg tracking-wide leading-relaxed">
+            everyone's differet, user test, there are other things that effect
+            and can impact - like font, text size, colors and contrasts. Here
+            are some websites I think parallax well. Here are resources on
+            accessibility
           </p>
         </div>
       </div>
