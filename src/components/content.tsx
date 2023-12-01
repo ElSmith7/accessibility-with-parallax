@@ -2,15 +2,32 @@ import { Parallax } from "react-scroll-parallax";
 import dark_tear from "../images/dark_tear.png";
 import light_tear from "../images/light_tear.png";
 
-const Content = () => {
+interface ContentProps {
+  parallaxEnabled: boolean;
+}
+
+const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
+  let paddingTop;
+  if (parallaxEnabled) {
+    paddingTop = "pt-32";
+  } else {
+    paddingTop = "";
+  }
+
   return (
     <div className="relative">
-      <Parallax speed={20}>
-        <img className="w-full -mt-40" src={dark_tear} alt="paper tear" />
+      <Parallax disabled={!parallaxEnabled} speed={20}>
+        <img
+          className={`w-full ${parallaxEnabled ? "-mt-36" : ""}`}
+          src={dark_tear}
+          alt="paper tear"
+        />
         <div className="p-28 bg-black" />
       </Parallax>
 
-      <div className="relative bg-black text-white z-1 -mt-40 pt-32 pb-72">
+      <div
+        className={`relative bg-black text-white z-1 -mt-40  pb-72 ${paddingTop} `}
+      >
         <div className="font-arimo mx-36 ">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
             Intro
@@ -27,11 +44,11 @@ const Content = () => {
           </p>
         </div>
       </div>
-      <Parallax speed={20}>
+      <Parallax disabled={!parallaxEnabled} speed={20}>
         <img className="w-full -mt-44 z-2" src={light_tear} alt="paper tear" />
         <div className=" p-28 bg-white" />
       </Parallax>
-      <div className="relative z-3 -mt-44 pt-32 pb-72">
+      <div className={`relative z-3 -mt-44 pb-72 ${paddingTop}`}>
         <div className="font-arimo mx-36">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
             Impact on Accessibility
@@ -71,11 +88,11 @@ const Content = () => {
           </p>
         </div>
       </div>
-      <Parallax speed={20}>
+      <Parallax disabled={!parallaxEnabled} speed={20}>
         <img className="w-full -mt-44 z-3" src={dark_tear} alt="paper tear" />
         <div className=" p-28 bg-black" />
       </Parallax>
-      <div className="relative bg-black z-5 -mt-44 pt-32 pb-72">
+      <div className={`relative bg-black z-5 -mt-44 pb-72 ${paddingTop}`}>
         <div className="font-arimo text-white mx-36">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
             Accessibility with Parallax?
@@ -116,11 +133,11 @@ const Content = () => {
           </p>
         </div>
       </div>
-      <Parallax speed={20}>
+      <Parallax disabled={!parallaxEnabled} speed={20}>
         <img className="w-full -mt-44 z-5" src={light_tear} alt="paper tear" />
         <div className=" p-28 bg-white" />
       </Parallax>
-      <div className="relative z-6 -mt-44 pt-32 pb-72">
+      <div className={`relative z-6 -mt-44 pb-72 ${paddingTop}`}>
         <div className="font-arimo mx-36">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
             In Conclusion
