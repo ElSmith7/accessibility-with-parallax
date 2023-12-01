@@ -127,10 +127,16 @@ const Content = () => {
           </h1>
           <br />
           <p className="text-lg tracking-wide leading-relaxed">
-            everyone's differet, user test, there are other things that effect
-            and can impact - like font, text size, colors and contrasts. Here
-            are some websites I think parallax well. Here are resources on
-            accessibility
+            When designing and coding with accessibility in mind iot's important
+            to remember everyone's different and one of the best hings you can
+            do to see if and how your parallax effects might impact it is to get
+            users to test it and give you direct feedback on it. Keep in mind
+            that moving effects and animations aren't the only thing that alter
+            a user's experience. There are many design choices that have an
+            impact. For instance fonts, line height, letter spacing, margins,
+            color contrast will all have an impact on the accessibility of your
+            website. Below I have listen some resources on accessibility and
+            design that might come in handy!
           </p>
         </div>
       </div>
