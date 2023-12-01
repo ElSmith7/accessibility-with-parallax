@@ -7,11 +7,11 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
-  let paddingTop;
+  let padding;
   if (parallaxEnabled) {
-    paddingTop = "pt-32";
+    padding = "pt-32 pb-72";
   } else {
-    paddingTop = "";
+    padding = "pt-16 pb-96";
   }
 
   return (
@@ -26,7 +26,8 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
       </Parallax>
 
       <div
-        className={`relative bg-black text-white z-1 -mt-40  pb-72 ${paddingTop} `}
+        id="intro"
+        className={`relative bg-black text-white z-1 -mt-40   ${padding} `}
       >
         <div className="font-arimo mx-36 ">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
@@ -48,7 +49,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         <img className="w-full -mt-44 z-2" src={light_tear} alt="paper tear" />
         <div className=" p-28 bg-white" />
       </Parallax>
-      <div className={`relative z-3 -mt-44 pb-72 ${paddingTop}`}>
+      <div id="impact" className={`relative z-3 -mt-44  ${padding}`}>
         <div className="font-arimo mx-36">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
             Impact on Accessibility
@@ -92,15 +93,15 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         <img className="w-full -mt-44 z-3" src={dark_tear} alt="paper tear" />
         <div className=" p-28 bg-black" />
       </Parallax>
-      <div className={`relative bg-black z-5 -mt-44 pb-72 ${paddingTop}`}>
+      <div id="usage" className={`relative bg-black z-5 -mt-44  ${padding}`}>
         <div className="font-arimo text-white mx-36">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
-            Accessibility with Parallax?
+            Using Parallax
           </h1>
           <br />
           <p className="text-lg tracking-wide leading-relaxed">
             While there are aspects of the effects that impact accessibility,
-            there are still many ways to utilize parallax to create a dynamic,
+            there are still many ways to use parallax to create a dynamic,
             interactive website that doesn't interfere with access to content.
             <br />
             <br />
@@ -137,7 +138,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         <img className="w-full -mt-44 z-5" src={light_tear} alt="paper tear" />
         <div className=" p-28 bg-white" />
       </Parallax>
-      <div className={`relative z-6 -mt-44 pb-72 ${paddingTop}`}>
+      <div id="conclusion" className={`relative z-6 -mt-44  ${padding}`}>
         <div className="font-arimo mx-36">
           <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
             In Conclusion
