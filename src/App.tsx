@@ -9,7 +9,10 @@ const App = () => {
 
   return (
     <ParallaxProvider>
-      <NavBar toggleParallax={() => setParallaxEnabled((prev) => !prev)} />
+      <NavBar
+        parallaxEnabled={parallaxEnabled}
+        toggleParallax={() => setParallaxEnabled((prev) => !prev)}
+      />
       <Hero parallaxEnabled={parallaxEnabled} />
       <Content parallaxEnabled={parallaxEnabled} />
     </ParallaxProvider>
