@@ -16,10 +16,18 @@ const NavBar: React.FC<NavBarProps> = ({ toggleParallax, parallaxEnabled }) => {
       </button>
       ;
       <div className="flex space-x-4 text-white">
-        <a href="#intro">Intro</a>
-        <a href="#impact">Impact</a>
-        <a href="#usage">Usage</a>
-        <a href="#conclusion">Conclusion</a>
+        <a className="hover:opacity-70" href="#intro">
+          Intro
+        </a>
+        <a className="hover:opacity-70" href="#impact">
+          Impact
+        </a>
+        <a className="hover:opacity-70" href="#usage">
+          Usage
+        </a>
+        <a className="hover:opacity-70" href="#conclusion">
+          Conclusion
+        </a>
       </div>
     </nav>
   );
