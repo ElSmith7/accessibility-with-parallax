@@ -55,12 +55,13 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
             Impact on Accessibility
           </h1>
           <br />
-          <p className="text-lg tracking-wide leading-relaxed">
-            We all know that there are many elements of parallax effects that
-            can negatively impact the usability of a website. But moving content
-            at varying speeds can have particular repercussion on users with
-            accessibility needs.
-            <br />
+          <div className="text-lg tracking-wide leading-relaxed">
+            <p>
+              We all know that there are many elements of parallax effects that
+              can negatively impact the usability of a website. But moving
+              content at varying speeds can have particular repercussion on
+              users with accessibility needs.
+            </p>
             <br />
             <ul className="list-disc ml-10">
               <li className="mb-3">
@@ -81,12 +82,15 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
               </li>
             </ul>
             <br />
-            These are just a few examples of the issues parallax can cause and
-            these problems don't just effect neurodivergent and disabled people.
-            Using these visual effects has the potential to turn away many
-            different users as while they might look "dynamic" they can have a
-            negative impact on the aesthetic functionality of your website.
-          </p>
+            <p>
+              These are just a few examples of the issues parallax can cause and
+              these problems don't just effect neurodivergent and disabled
+              people. Using these visual effects has the potential to turn away
+              many different users as while they might look "dynamic" they can
+              have a negative impact on the aesthetic functionality of your
+              website.
+            </p>
+          </div>
         </div>
       </div>
       <Parallax disabled={!parallaxEnabled} speed={20}>
@@ -99,11 +103,12 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
             Using Parallax
           </h1>
           <br />
-          <p className="text-lg tracking-wide leading-relaxed">
-            While there are aspects of the effects that impact accessibility,
-            there are still many ways to use parallax to create a dynamic,
-            interactive website that doesn't interfere with access to content.
-            <br />
+          <div className="text-lg tracking-wide leading-relaxed">
+            <p>
+              While there are aspects of the effects that impact accessibility,
+              there are still many ways to use parallax to create a dynamic,
+              interactive website that doesn't interfere with access to content.
+            </p>
             <br />
             <ul className="list-disc ml-10">
               <li className="mb-3">
@@ -131,7 +136,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
                 all, some would still much rather interact with a static UI.
               </li>
             </ul>
-          </p>
+          </div>
         </div>
       </div>
       <Parallax disabled={!parallaxEnabled} speed={20}>
@@ -144,19 +149,73 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
             In Conclusion
           </h1>
           <br />
-          <p className="text-lg tracking-wide leading-relaxed">
-            When designing and coding with accessibility in mind iot's important
-            to remember everyone's different and one of the best hings you can
-            do to see if and how your parallax effects might impact it is to get
-            users to test it and give you direct feedback on it. Keep in mind
-            that moving effects and animations aren't the only thing that alter
-            a user's experience. There are many design choices that have an
-            impact. For instance fonts, line height, letter spacing, margins,
-            color contrast will all have an impact on the accessibility of your
-            website. Below I have listen some resources on accessibility and
-            design that might come in handy!
-          </p>
+          <div className="text-lg tracking-wide leading-relaxed">
+            <p>
+              When designing and coding with accessibility in mind iot's
+              important to remember everyone's different and one of the best
+              hings you can do to see if and how your parallax effects might
+              impact it is to get users to test it and give you direct feedback
+              on it. Keep in mind that moving effects and animations aren't the
+              only thing that alter a user's experience. There are many design
+              choices that have an impact. For instance fonts, line height,
+              letter spacing, margins, color contrast will all have an impact on
+              the accessibility of your website. Below I have listen some
+              resources on accessibility and design that might come in handy!
+            </p>
+            <br />
+            <ul className="list-disc ml-10">
+              <li className="mb-3">
+                "What Parallax Lacks" by Katie Sherwin. A comprehensive article
+                on usability with parallax.
+                <a
+                  className="hover:opacity-60 italic"
+                  href="https://www.nngroup.com/articles/parallax-usability/#:~:text=Summary%3A%20Parallax%2Dscrolling%20effects%20add,benefits%20are%20worth%20the%20cost."
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit here.
+                </a>
+              </li>
+              <li className="mb-3">
+                "Accessible Website Design for the Neurospicy" by Stephanie
+                Shaw. Stephanie's talk at React Advanced London 2023 covering
+                accessibility in web design.
+                <a
+                  className="hover:opacity-60 italic"
+                  href="https://portal.gitnation.org/contents/thinking-differently-about-a11y-accessible-website-design-for-the-neurospicy"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit here.
+                </a>
+              </li>
+              <li>
+                "Web Content Accessibility Guidelines (WCAG) 2.2" from W3C. A
+                wide range of recommendations for making Web content more
+                accessible.
+                <a
+                  className="hover:opacity-60 italic"
+                  href="https://www.w3.org/TR/WCAG22/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit here.
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <Parallax disabled={!parallaxEnabled} speed={20}>
+        <img
+          className={`w-full ${parallaxEnabled ? "-mt-36" : ""}`}
+          src={dark_tear}
+          alt="paper tear"
+        />
+        <div className="p-28 bg-black" />
+      </Parallax>
+      <div className={`relative bg-black text-white z-1 -mt-40   ${padding} `}>
+        <div className="font-arimo mx-36 "></div>
       </div>
     </div>
   );

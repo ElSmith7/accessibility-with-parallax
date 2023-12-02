@@ -20,7 +20,6 @@ const NavBar: React.FC<NavBarProps> = ({ toggleParallax, parallaxEnabled }) => {
         <a href="#impact">Impact</a>
         <a href="#usage">Usage</a>
         <a href="#conclusion">Conclusion</a>
-        {/* <a href="#resources">Resources</a> */}
       </div>
     </nav>
   );
