@@ -1,6 +1,9 @@
 import { Parallax } from "react-scroll-parallax";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import dark_tear from "../images/dark_tear.png";
 import light_tear from "../images/light_tear.png";
+import Cup from "../images/Cup.png";
 
 interface ContentProps {
   parallaxEnabled: boolean;
@@ -206,17 +209,63 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           </div>
         </div>
       </div>
-      <Parallax disabled={!parallaxEnabled} speed={20}>
-        <img
-          className={`w-full ${parallaxEnabled ? "-mt-36" : ""}`}
-          src={dark_tear}
-          alt="paper tear"
-        />
-        <div className="p-28 bg-black" />
-      </Parallax>
-      <div className={`relative bg-black text-white z-1 -mt-40   ${padding} `}>
-        <div className="font-arimo mx-36 "></div>
-      </div>
+
+      <img className="w-full -mt-36" src={dark_tear} alt="paper tear" />
+      <div className="p-28 bg-black" />
+
+      <footer className={`relative bg-black text-white z-1 -mt-60`}>
+        <div
+          className={`flex justify-between font-arimo mx-36 ${
+            parallaxEnabled ? "-mt-20" : ""
+          }`}
+        >
+          <div className="flex items-center">
+            <a
+              className="hover:opacity-70"
+              href="https://github.com/ElSmith7"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithubSquare className="text-6xl mr-6" />
+            </a>
+            <a
+              className="hover:opacity-70"
+              href="https://www.linkedin.com/in/el-smith/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin className="text-6xl mr-6" />
+            </a>
+            <a
+              className="hover:opacity-70 w-20"
+              href="https://eleanorsmith.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={Cup} alt="tea cup" />
+            </a>
+          </div>
+          <div className="text-lg tracking-wide leading-relaxed text-end items-center">
+            <h4>
+              Website by{" "}
+              <a
+                className="hover:opacity-70"
+                href="https://eleanorsmith.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Eleanor Smith
+              </a>
+            </h4>
+            <a
+              className="hover:opacity-70"
+              href="mailto:el.mortonsmith@gmail.com"
+            >
+              el.mortonsmith@gmail.com
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
