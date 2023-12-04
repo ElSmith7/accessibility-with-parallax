@@ -38,13 +38,12 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           </h1>
           <br />
           <p className="text-lg tracking-wide leading-relaxed">
-            Parallax effects can add that extra spark to your website. They were
-            all the rage in the 2010s and are still widely used in web design
-            today. For some, parallax effects mean a dynamic and eye-catching
-            website, to many others it means a terrible user experience. So how
-            can we improve our implementation of parallax effects and use it to
-            create dynamic websites that have little to no interference with
-            accessibility needs. Let's dive in!
+            Parallax effects can add that extra spark to your website. Popular
+            in the 2010s, they remain prevalent in today's web design. While
+            some view parallax effects as dynamic and visually appealing, others
+            find them to detract from the user experience. So, how can we refine
+            our use of parallax to create dynamic websites that minimally impact
+            accessibility?
           </p>
         </div>
       </div>
@@ -60,11 +59,11 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           <br />
           <div className="text-lg tracking-wide leading-relaxed">
             <p>
-              We all know that there are many elements of parallax effects that
-              can negatively impact the usability of a website. But moving
-              content at varying speeds can have particular repercussion on
-              users with accessibility needs.
+              It's widely acknowledged that parallax effects can negatively
+              affect website usability. This is especially true for individuals
+              with accessibility requirements.
             </p>
+
             <br />
             <ul className="list-disc ml-10">
               <li className="mb-3">
@@ -79,19 +78,17 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
               </li>
               <li>
                 If you struggle with concentration and you're bombarded with a
-                continuously changing fluctuation of items on your screen, it's
-                going to be pretty hard to tell where to focus or even how to
-                navigate the page.
+                screen cluttered with constantly shifting elements, it's going
+                to be hard to tell where to focus or how to navigate the page.
               </li>
             </ul>
             <br />
             <p>
-              These are just a few examples of the issues parallax can cause and
-              these problems don't just effect neurodivergent and disabled
-              people. Using these visual effects has the potential to turn away
-              many different users as while they might look "dynamic" they can
-              have a negative impact on the aesthetic functionality of your
-              website.
+              These examples highlight how parallax can create accessibility
+              challenges, impacting not only neurodivergent and disabled
+              individuals but also a broader audience. Despite their dynamic
+              appearance, such visual effects can detract from the overall
+              functionality and user experience of a website.
             </p>
           </div>
         </div>
@@ -108,35 +105,33 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           <br />
           <div className="text-lg tracking-wide leading-relaxed">
             <p>
-              While there are aspects of the effects that impact accessibility,
-              there are still many ways to use parallax to create a dynamic,
-              interactive website that doesn't interfere with access to content.
+              Despite its impact on accessibility, parallax can still be
+              utilized effectively to craft a dynamic and engaging website that
+              don't hinder access to content.
             </p>
+
             <br />
             <ul className="list-disc ml-10">
               <li className="mb-3">
-                Take it slow. Try to have your elements moving fast enough that
-                you get the effect but not much faster. There should be a sense
-                of movement rather than a clear rush of motion.
+                <b>Take it slow.</b> Ensure elements move at a pace that
+                achieves the desired effect without overwhelming users. Aim for
+                a gentle flow rather than rapid movement.
               </li>
               <li className="mb-3">
-                Keep parallax effects scrolling at the same rate throughout
-                their path. For instance if you're using a library like
-                react-scroll-parallax, avoid using "easing". When you change the
-                speed of scrolling mid way through the element's path it can be
-                extremely jarring.
+                <b>Maintain consistent scrolling speed.</b> When using tools
+                like react-scroll-parallax, refrain from implementing easing
+                functions that alter an element's speed mid scroll. These can be
+                disorienting.
               </li>
               <li className="mb-3">
-                Avoid putting text on parallax elements. Text should always
-                scroll at the same rate as the user. In this webpage, for
-                instance, the text is separate to all parallax scrolling
-                elements. This give a subtle dynamic feel to the page while not
-                interfering with the content.
+                <b>Separate text from parallax.</b> Keep text content scrolling
+                at the same rate as the user, this maintains readability and
+                comfort.
               </li>
               <li>
-                And of course, provide a clear way to disable animations and
-                effects. Give the user control of their experience because after
-                all, some would still much rather interact with a static UI.
+                <b>Offer options to disable effects.</b> Empower users with the
+                choice to turn off animations and parallax features, catering to
+                those who prefer a more static experience.
               </li>
             </ul>
           </div>
@@ -154,22 +149,23 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           <br />
           <div className="text-lg tracking-wide leading-relaxed">
             <p>
-              When designing and coding with accessibility in mind iot's
-              important to remember everyone's different and one of the best
-              hings you can do to see if and how your parallax effects might
-              impact it is to get users to test it and give you direct feedback
-              on it. Keep in mind that moving effects and animations aren't the
-              only thing that alter a user's experience. There are many design
-              choices that have an impact. For instance fonts, line height,
-              letter spacing, margins, color contrast will all have an impact on
-              the accessibility of your website. Below I have listen some
-              resources on accessibility and design that might come in handy!
+              <p>
+                In the realm of accessibility-focused design and development,
+                acknowledging that every user's needs are different is crucial.
+                Engaging users in testing and soliciting direct feedback on
+                parallax effects is invaluable. Remember, it's not just
+                animations and motion effects that influence user experience.
+                Elements like font choice, line height, letter spacing, margins,
+                and color contrast also play significant roles in accessibility.
+                Below, you'll find a selection of resources on accessibility and
+                design that might be helpful going forward!
+              </p>
             </p>
             <br />
             <ul className="list-disc ml-10">
               <li className="mb-3">
-                "What Parallax Lacks" by Katie Sherwin. A comprehensive article
-                on usability with parallax.
+                <b>"What Parallax Lacks"</b> by Katie Sherwin. A comprehensive
+                article on usability with parallax.
                 <a
                   className="hover:opacity-60 italic"
                   href="https://www.nngroup.com/articles/parallax-usability/#:~:text=Summary%3A%20Parallax%2Dscrolling%20effects%20add,benefits%20are%20worth%20the%20cost."
@@ -180,9 +176,9 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
                 </a>
               </li>
               <li className="mb-3">
-                "Accessible Website Design for the Neurospicy" by Stephanie
-                Shaw. Stephanie's talk at React Advanced London 2023 covering
-                accessibility in web design.
+                <b>"Accessible Website Design for the Neurospicy"</b> by
+                Stephanie Shaw. Stephanie's talk at React Advanced London 2023
+                covering accessibility in web design.
                 <a
                   className="hover:opacity-60 italic"
                   href="https://portal.gitnation.org/contents/thinking-differently-about-a11y-accessible-website-design-for-the-neurospicy"
@@ -193,8 +189,8 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
                 </a>
               </li>
               <li>
-                "Web Content Accessibility Guidelines (WCAG) 2.2" from W3C. A
-                wide range of recommendations for making Web content more
+                <b>"Web Content Accessibility Guidelines (WCAG) 2.2"</b> from
+                W3C. A wide range of recommendations for making Web content more
                 accessible.
                 <a
                   className="hover:opacity-60 italic"
