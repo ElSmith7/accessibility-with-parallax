@@ -41,9 +41,9 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
             Parallax effects can add that extra spark to your website. Popular
             in the 2010s, they remain prevalent in today's web design. While
             some view parallax effects as dynamic and visually appealing, others
-            find them to detract from the user experience. So, how can we refine
-            our use of parallax to create dynamic websites that minimally impact
-            accessibility?
+            find them to detract from the user experience. So how can we refine
+            our use of parallax to create dynamic websites that have minimal
+            impact on accessibility?
           </p>
         </div>
       </div>
