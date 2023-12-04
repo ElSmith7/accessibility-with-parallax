@@ -210,11 +210,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
       <div className="p-28 bg-black" />
 
       <footer className={`relative bg-black text-white z-1 -mt-60`}>
-        <div
-          className={`flex justify-between font-arimo mx-36 ${
-            parallaxEnabled ? "-mt-20" : ""
-          }`}
-        >
+        <div className="flex justify-between font-arimo mx-36 mt-10">
           <div className="flex items-center">
             <a
               className="hover:opacity-70"
