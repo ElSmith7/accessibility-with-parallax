@@ -21,7 +21,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
     <div className="relative">
       <Parallax disabled={!parallaxEnabled} speed={20}>
         <img
-          className={`w-full ${parallaxEnabled ? "-mt-36" : ""}`}
+          className={`w-full  ${parallaxEnabled ? " -mt-44 md:-mt-36" : ""}`}
           src={dark_tear}
           alt="paper tear"
         />
@@ -30,14 +30,12 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
 
       <div
         id="intro"
-        className={`relative bg-black text-white z-1 -mt-40   ${padding} `}
+        className={`relative bg-black text-white z-1 -mt-32 md:-mt-40  ${padding} `}
       >
-        <div className="font-arimo mx-36 ">
-          <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
-            Intro
-          </h1>
+        <div className="font-arimo mx-16 sm:mx-24 md:mx-36">
+          <h1 className="section-header">Intro</h1>
           <br />
-          <p className="text-lg tracking-wide leading-relaxed">
+          <p className="text">
             Parallax effects can add that extra spark to your website. Popular
             in the 2010s, they remain prevalent in today's web design. While
             some view parallax effects as dynamic and visually appealing, others
@@ -48,16 +46,18 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         </div>
       </div>
       <Parallax disabled={!parallaxEnabled} speed={20}>
-        <img className="w-full -mt-44 z-2" src={light_tear} alt="paper tear" />
+        <img
+          className="w-full -mt-40 md:-mt-44 z-2"
+          src={light_tear}
+          alt="paper tear"
+        />
         <div className=" p-28 bg-white" />
       </Parallax>
-      <div id="impact" className={`relative z-3 -mt-44  ${padding}`}>
-        <div className="font-arimo mx-36">
-          <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
-            Impact on Accessibility
-          </h1>
+      <div id="impact" className={`relative z-3 -mt-40 md:-mt-44 ${padding}`}>
+        <div className="font-arimo mx-16 sm:mx-24 md:mx-36">
+          <h1 className="section-header">Impact on Accessibility</h1>
           <br />
-          <div className="text-lg tracking-wide leading-relaxed">
+          <div className="text">
             <p>
               It's widely acknowledged that parallax effects can negatively
               affect website usability. This is especially true for individuals
@@ -94,16 +94,21 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         </div>
       </div>
       <Parallax disabled={!parallaxEnabled} speed={20}>
-        <img className="w-full -mt-44 z-3" src={dark_tear} alt="paper tear" />
-        <div className=" p-28 bg-black" />
+        <img
+          className="w-full -mt-40 md:-mt-44 z-4"
+          src={dark_tear}
+          alt="paper tear"
+        />
+        <div className="p-28 bg-black" />
       </Parallax>
-      <div id="usage" className={`relative bg-black z-5 -mt-44  ${padding}`}>
-        <div className="font-arimo text-white mx-36">
-          <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
-            Using Parallax
-          </h1>
+      <div
+        id="usage"
+        className={`relative bg-black z-5 -mt-40 md:-mt-44  ${padding}`}
+      >
+        <div className="font-arimo text-white mx-16 sm:mx-24 md:mx-36">
+          <h1 className="section-header">Using Parallax</h1>
           <br />
-          <div className="text-lg tracking-wide leading-relaxed">
+          <div className="text">
             <p>
               Despite its impact on accessibility, parallax can still be
               utilized effectively to craft a dynamic and engaging website that
@@ -138,28 +143,31 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         </div>
       </div>
       <Parallax disabled={!parallaxEnabled} speed={20}>
-        <img className="w-full -mt-44 z-5" src={light_tear} alt="paper tear" />
+        <img
+          className="w-full -mt-40 md:-mt-44 z-5"
+          src={light_tear}
+          alt="paper tear"
+        />
         <div className=" p-28 bg-white" />
       </Parallax>
-      <div id="conclusion" className={`relative z-6 -mt-44  ${padding}`}>
-        <div className="font-arimo mx-36">
-          <h1 className="font-bold text-5xl tracking-wide leading-relaxed">
-            In Conclusion
-          </h1>
+      <div
+        id="conclusion"
+        className={`relative z-6 -mt-40 md:-mt-44 ${padding}`}
+      >
+        <div className="font-arimo mx-16 sm:mx-24 md:mx-36">
+          <h1 className="section-header">In Conclusion</h1>
           <br />
-          <div className="text-lg tracking-wide leading-relaxed">
+          <div className="text">
             <p>
-              <p>
-                In the realm of accessibility-focused design and development,
-                acknowledging that every user's needs are different is crucial.
-                Engaging users in testing and soliciting direct feedback on
-                parallax effects is invaluable. Remember, it's not just
-                animations and motion effects that influence user experience.
-                Elements like font choice, line height, letter spacing, margins,
-                and color contrast also play significant roles in accessibility.
-                Below, you'll find a selection of resources on accessibility and
-                design that might be helpful going forward!
-              </p>
+              In the realm of accessibility-focused design and development,
+              acknowledging that every user's needs are different is crucial.
+              Engaging users in testing and soliciting direct feedback on
+              parallax effects is invaluable. Remember, it's not just animations
+              and motion effects that influence user experience. Elements like
+              font choice, line height, letter spacing, margins, and color
+              contrast also play significant roles in accessibility. Below,
+              you'll find a selection of resources on accessibility and design
+              that might be helpful going forward!
             </p>
             <br />
             <ul className="list-disc ml-10">
@@ -188,6 +196,20 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
                   Visit here.
                 </a>
               </li>
+              <li className="mb-3">
+                <b>"Mismatch: How Inclusion Shapes Design"</b> by Kat Holmes.
+                Kat's talk for GeekWire covers how UX design can impact who can
+                use what tech and how designers should strive to include
+                everyone.
+                <a
+                  className="hover:opacity-60 italic"
+                  href="https://www.youtube.com/watch?v=SYu6wnZhrBU"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit here.
+                </a>
+              </li>
               <li>
                 <b>"Web Content Accessibility Guidelines (WCAG) 2.2"</b> from
                 W3C. A wide range of recommendations for making Web content more
@@ -206,11 +228,15 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         </div>
       </div>
 
-      <img className="w-full -mt-36" src={dark_tear} alt="paper tear" />
+      <img
+        className="w-full -mt-60 md:-mt-36"
+        src={dark_tear}
+        alt="paper tear"
+      />
       <div className="p-28 bg-black" />
 
-      <footer className={`relative bg-black text-white z-1 -mt-60`}>
-        <div className="flex justify-between font-arimo mx-36 mt-10">
+      <footer className="-mt-60 bg-black text-white z-1">
+        <div className="flex justify-between font-arimo mx-10 mt-10 sm:mx-16 md:mx-24 ">
           <div className="flex items-center">
             <a
               className="hover:opacity-70"
@@ -218,7 +244,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaGithubSquare className="text-6xl mr-6" />
+              <FaGithubSquare className="text-4xl mr-3 md:mr-6 md:text-6xl" />
             </a>
             <a
               className="hover:opacity-70"
@@ -226,10 +252,10 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaLinkedin className="text-6xl mr-6" />
+              <FaLinkedin className="text-4xl mr-3 md:mr-6 md:text-6xl" />
             </a>
             <a
-              className="hover:opacity-70 w-20"
+              className="hover:opacity-70 w-12 md:w-20"
               href="https://eleanorsmith.netlify.app/"
               target="_blank"
               rel="noreferrer"
@@ -237,7 +263,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
               <img src={Cup} alt="tea cup" />
             </a>
           </div>
-          <div className="text-lg tracking-wide leading-relaxed text-end items-center">
+          <div className="text text-end items-center">
             <h4>
               Website by{" "}
               <a

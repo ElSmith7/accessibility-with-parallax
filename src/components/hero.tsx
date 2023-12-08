@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ parallaxEnabled }) => {
       <Parallax disabled={!parallaxEnabled} speed={15} className="absolute">
         <img src={paper4} alt="crumpled paper sketch" />
       </Parallax>
-      <h1 className="z-10 text-4xl tracking-wide font-elite font-bold -mt-80 pb-8 text-center leading-10">
+      <h1 className="z-10 text-2xl tracking-wide font-elite font-bold -mt-64  text-center leading-7 sm:-mt-72 sm:pb-10 sm:text-3xl md:-mt-80 md:pb-8 md:leading-10 md:text-4xl">
         Parallax
         <br />
         and
