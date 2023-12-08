@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Special+Elite&display=swap");
+
+@layer components {
+  .section-header {
+    @apply font-bold text-4xl tracking-wide leading-relaxed md:text-5xl;
+  }
+  .text {
+    @apply text-base tracking-wide leading-relaxed md:text-lg;
+  }
+}
