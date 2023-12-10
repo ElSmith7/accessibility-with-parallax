@@ -32,7 +32,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         id="intro"
         className={`relative bg-black text-white z-1 -mt-32 md:-mt-40  ${padding} `}
       >
-        <div className="font-arimo mx-16 sm:mx-24 md:mx-36">
+        <div className="font-arimo mx-8 xs:mx-16 sm:mx-24 lg:mx-36">
           <h1 className="section-header">Intro</h1>
           <br />
           <p className="text">
@@ -54,7 +54,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         <div className=" p-28 bg-white" />
       </Parallax>
       <div id="impact" className={`relative z-3 -mt-40 md:-mt-44 ${padding}`}>
-        <div className="font-arimo mx-16 sm:mx-24 md:mx-36">
+        <div className="font-arimo mx-8 xs:mx-16 sm:mx-24 lg:mx-36">
           <h1 className="section-header">Impact on Accessibility</h1>
           <br />
           <div className="text">
@@ -65,7 +65,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
             </p>
 
             <br />
-            <ul className="list-disc ml-10">
+            <ul className="list-disc ml-5 sm:ml-10">
               <li className="mb-3">
                 Imagine you find reading challenging and you suddenly have text
                 flying past at a completely different speed than your expecting
@@ -105,7 +105,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         id="usage"
         className={`relative bg-black z-5 -mt-40 md:-mt-44  ${padding}`}
       >
-        <div className="font-arimo text-white mx-16 sm:mx-24 md:mx-36">
+        <div className="font-arimo text-white mx-8 xs:mx-16 sm:mx-24 lg:mx-36">
           <h1 className="section-header">Using Parallax</h1>
           <br />
           <div className="text">
@@ -116,7 +116,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
             </p>
 
             <br />
-            <ul className="list-disc ml-10">
+            <ul className="list-disc ml-5 sm:ml-10">
               <li className="mb-3">
                 <b>Take it slow.</b> Ensure elements move at a pace that
                 achieves the desired effect without overwhelming users. Aim for
@@ -154,8 +154,8 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         id="conclusion"
         className={`relative z-6 -mt-40 md:-mt-44 ${padding}`}
       >
-        <div className="font-arimo mx-16 sm:mx-24 md:mx-36">
-          <h1 className="section-header">In Conclusion</h1>
+        <div className="font-arimo mx-8 xs:mx-16 sm:mx-24 lg:mx-36">
+          <h1 className="section-header">Conclusion</h1>
           <br />
           <div className="text">
             <p>
@@ -170,7 +170,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
               that might be helpful going forward!
             </p>
             <br />
-            <ul className="list-disc ml-10">
+            <ul className="list-disc ml-5 sm:ml-10">
               <li className="mb-3">
                 <b>"What Parallax Lacks"</b> by Katie Sherwin. A comprehensive
                 article on usability with parallax.
@@ -236,8 +236,8 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
       <div className="p-28 bg-black" />
 
       <footer className="-mt-60 bg-black text-white z-1">
-        <div className="flex justify-between font-arimo mx-10 mt-10 sm:mx-16 md:mx-24 ">
-          <div className="flex items-center">
+        <div className="xs:flex justify-between font-arimo mx-10 mt-10 sm:mx-16 md:mx-24 ">
+          <div className="flex items-center mb-3 xs:mb-0">
             <a
               className="hover:opacity-70"
               href="https://github.com/ElSmith7"
@@ -263,7 +263,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
               <img src={Cup} alt="tea cup" />
             </a>
           </div>
-          <div className="text text-end items-center">
+          <div className="text  xs:items-center xs:text-end">
             <h4>
               Website by{" "}
               <a
