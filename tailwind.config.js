@@ -7,6 +7,9 @@ module.exports = {
         arimo: ["Arimo", "sans-serif"],
         elite: ["Special Elite", "sans-serif"],
       },
+      screens: {
+        xs: "460px",
+      },
     },
   },
   plugins: [],
