@@ -5,10 +5,10 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ toggleParallax, parallaxEnabled }) => {
   return (
-    <nav className="sticky z-10 top-0 left-0 w-full flex justify-between items-center py-2 px-4 bg-black text-md font-arimo font-bold">
+    <nav className="sticky z-10 top-0 left-0 w-full flex justify-center items-center py-2 px-4 bg-black text-md font-arimo font-bold xs:justify-between">
       <button
         onClick={toggleParallax}
-        className={`py-2 px-4 rounded-full transition-colors border-solid border-2 border-white tracking-wide leading-relaxed ${
+        className={`hidden py-2 px-4 rounded-full transition-colors border-solid border-2 border-white tracking-wide leading-relaxed xs:block ${
           parallaxEnabled ? "bg-white" : "bg-black  text-white"
         }`}
       >
