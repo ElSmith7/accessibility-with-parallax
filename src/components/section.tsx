@@ -1,29 +1,27 @@
-interface sectionProps {
+interface SectionProps {
   id: string;
   title: string;
-  zIndex: string;
-  padding: string;
-  marginTop: string;
-  backgroundColor: string;
-  textColor: string;
-  children?: React.ReactNode;
+  backgroundColor?: string;
+  textColor?: string;
+  marginTop?: string;
+  padding?: string;
+  children: React.ReactNode;
 }
 
-const Section: React.FC<sectionProps> = ({
+const Section: React.FC<SectionProps> = ({
   id,
   title,
-  zIndex,
-  padding,
-  marginTop,
   backgroundColor,
   textColor,
+  marginTop = "-mt-40 md:-mt-44",
+  padding,
   children,
 }) => (
   <section
     id={id}
-    className={`relative ${backgroundColor} ${zIndex} ${marginTop} ${padding}`}
+    className={`relative ${backgroundColor} ${textColor} ${marginTop} ${padding}`}
   >
-    <div className={`font-arimo ${textColor} mx-8 xs:mx-16 sm:mx-24 lg:mx-36 `}>
+    <div className="font-arimo mx-8 xs:mx-16 sm:mx-24 lg:mx-36">
       <h1 className="text-center font-bold text-5xl tracking-wide leading-relaxed sm:text-start">
         {title}
       </h1>
@@ -34,4 +32,5 @@ const Section: React.FC<sectionProps> = ({
     </div>
   </section>
 );
+
 export default Section;
