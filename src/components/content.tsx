@@ -1,6 +1,7 @@
 import { Parallax } from "react-scroll-parallax";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import Section from "./section";
 import dark_tear from "../images/dark_tear.png";
 import light_tear from "../images/light_tear.png";
 import Cup from "../images/Cup.png";
@@ -27,24 +28,24 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         />
         <div className="p-28 bg-black" />
       </Parallax>
-
-      <div
+      <Section
         id="intro"
-        className={`relative bg-black text-white z-1 -mt-32 md:-mt-40  ${padding} `}
+        title="Intro"
+        zIndex="z-1"
+        padding={padding}
+        backgroundColor="bg-black"
+        textColor="text-white"
+        marginTop="-mt-32 md:-mt-40"
       >
-        <div className="font-arimo mx-8 xs:mx-16 sm:mx-24 lg:mx-36">
-          <h1 className="section-header">Intro</h1>
-          <br />
-          <p className="text">
-            Parallax effects can add that extra spark to your website. Popular
-            in the 2010s, they remain prevalent in today's web design. While
-            some view parallax effects as dynamic and visually appealing, others
-            find them to detract from the user experience. So how can we refine
-            our use of parallax to create dynamic websites that have minimal
-            impact on accessibility?
-          </p>
-        </div>
-      </div>
+        <p className="text">
+          Parallax effects can add that extra spark to your website. Popular in
+          the 2010s, they remain prevalent in today's web design. While some
+          view parallax effects as dynamic and visually appealing, others find
+          them to detract from the user experience. So how can we refine our use
+          of parallax to create dynamic websites that have minimal impact on
+          accessibility?
+        </p>
+      </Section>
       <Parallax disabled={!parallaxEnabled} speed={20}>
         <img
           className="w-full -mt-40 md:-mt-44 z-2"
