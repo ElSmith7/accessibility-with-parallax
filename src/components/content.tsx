@@ -63,7 +63,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           <li className="mb-3">
             Imagine you find reading challenging and you suddenly have text
             flying past at a completely different speed than your expecting - it
-            makes even more difficult to read.
+            makes it even more difficult to read.
           </li>
           <li className="mb-3">
             What if you get overwhelmed by too much stimuli? Having a flurry of
