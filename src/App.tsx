@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Hero from "./components/hero";
 import Content from "./components/content";
 import NavBar from "./components/nav-bar";
+import Footer from "./components/footer";
 import useWindowSize from "./hooks/use-window-size";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       />
       <Hero parallaxEnabled={parallaxEnabled} />
       <Content parallaxEnabled={parallaxEnabled} />
+      <Footer />
     </ParallaxProvider>
   );
 };

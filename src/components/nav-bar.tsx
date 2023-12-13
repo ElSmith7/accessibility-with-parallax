@@ -9,13 +9,13 @@ const NavBar: React.FC<NavBarProps> = ({ toggleParallax, parallaxEnabled }) => {
       <button
         onClick={toggleParallax}
         className={`hidden py-2 px-4 rounded-full transition-colors border-solid border-2 border-white tracking-wide leading-relaxed xs:block ${
-          parallaxEnabled ? "bg-white" : "bg-black  text-white"
+          parallaxEnabled ? "bg-neutral-50" : "bg-black  text-neutral-50"
         }`}
       >
         {parallaxEnabled ? "Parallax Is On" : "Parallax Is Off"}
       </button>
       ;
-      <div className="flex space-x-4 text-white">
+      <div className="flex space-x-4 text-neutral-50">
         <a className="hover:opacity-70" href="#intro">
           Intro
         </a>

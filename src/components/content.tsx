@@ -1,6 +1,5 @@
 import { Parallax } from "react-scroll-parallax";
 import Section from "./section";
-import Footer from "./footer";
 import dark_tear from "../images/dark_tear.png";
 import light_tear from "../images/light_tear.png";
 
@@ -31,7 +30,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         title="Intro"
         padding={padding}
         backgroundColor="bg-black"
-        textColor="text-white"
+        textColor="text-neutral-50"
         marginTop="-mt-32 md:-mt-40"
       >
         <p className="text">
@@ -49,7 +48,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           src={light_tear}
           alt="paper tear"
         />
-        <div className=" p-28 bg-white" />
+        <div className=" p-28 bg-neutral-50" />
       </Parallax>
       <Section id="impact" title="Impact on Accessibility" padding={padding}>
         <p>
@@ -99,7 +98,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
         title="Using Parallax"
         padding={padding}
         backgroundColor="bg-black"
-        textColor="text-white"
+        textColor="text-neutral-50"
       >
         <p>
           Despite its impact on accessibility, parallax can still be utilized
@@ -137,7 +136,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           src={light_tear}
           alt="paper tear"
         />
-        <div className=" p-28 bg-white" />
+        <div className=" p-28 bg-neutral-50" />
       </Parallax>
       <Section id="conclusion" title="Conclusion" padding={padding}>
         <p>
@@ -206,7 +205,6 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           </li>
         </ul>
       </Section>
-      <Footer />
     </div>
   );
 };

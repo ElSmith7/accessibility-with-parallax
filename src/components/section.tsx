@@ -11,7 +11,7 @@ interface SectionProps {
 const Section: React.FC<SectionProps> = ({
   id,
   title,
-  backgroundColor,
+  backgroundColor = "bg-neutral-50",
   textColor,
   marginTop = "-mt-40 md:-mt-44",
   padding,
