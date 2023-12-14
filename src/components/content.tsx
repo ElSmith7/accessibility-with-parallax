@@ -16,7 +16,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
   }
 
   return (
-    <div className="relative">
+    <main className="relative">
       <Parallax disabled={!parallaxEnabled} speed={20}>
         <img
           className={`w-full  ${parallaxEnabled ? " -mt-44 md:-mt-36" : ""}`}
@@ -205,7 +205,7 @@ const Content: React.FC<ContentProps> = ({ parallaxEnabled }) => {
           </li>
         </ul>
       </Section>
-    </div>
+    </main>
   );
 };
 export default Content;

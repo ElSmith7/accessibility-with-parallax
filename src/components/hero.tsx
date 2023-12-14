@@ -11,7 +11,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ parallaxEnabled }) => {
   return (
-    <div
+    <header
       className="relative flex justify-center items-center "
       style={{ height: "620px" }}
     >
@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ parallaxEnabled }) => {
         <br />
         Accessibility
       </h1>
-    </div>
+    </header>
   );
 };
 

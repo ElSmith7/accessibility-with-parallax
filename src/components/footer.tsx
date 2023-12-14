@@ -5,7 +5,7 @@ import dark_tear from "../images/dark_tear.png";
 
 const Footer = () => {
   return (
-    <section className="relative">
+    <footer className="relative">
       <article>
         <img
           className="w-full -mt-60 md:-mt-36"
@@ -14,7 +14,7 @@ const Footer = () => {
         />
         <div className="p-28 bg-black" />
       </article>
-      <footer className="-mt-60 bg-black text-neutral-50 z-1">
+      <section className="-mt-60 bg-black text-neutral-50 z-1">
         <div className="xs:flex justify-between font-arimo mx-10 mt-10 sm:mx-16 md:mx-24 ">
           <div className="flex items-center mb-3 xs:mb-0">
             <a
@@ -62,8 +62,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </footer>
-    </section>
+      </section>
+    </footer>
   );
 };
 
