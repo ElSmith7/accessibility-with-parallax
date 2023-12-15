@@ -16,15 +16,15 @@ describe("Content Component", () => {
   it("renders all sections correctly", () => {
     renderWithProvider();
 
-    expect(screen.getByRole("header", { name: /intro/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /intro/i })).toBeInTheDocument();
     expect(
-      screen.getByRole("header", { name: /Impact on Accessibility/i })
+      screen.getByRole("heading", { name: /Impact on Accessibility/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("header", { name: /Using Parallax/i })
+      screen.getByRole("heading", { name: /Using Parallax/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("header", { name: /Conclusion/i })
+      screen.getByRole("heading", { name: /Conclusion/i })
     ).toBeInTheDocument();
 
     expect(screen.getAllByRole("img", { name: /paper tear/i })).toHaveLength(4);
@@ -35,7 +35,19 @@ describe("Content Component", () => {
     const parallaxImages = screen.getAllByRole("img", { name: /paper tear/i });
 
     parallaxImages.forEach((img) => {
-      expect(img.parentNode).toHaveStyle("transform:/translateY((.*?))/");
+      const parallaxDiv = img.parentNode;
+      if (parallaxDiv instanceof HTMLElement) {
+        expect(parallaxDiv.style.transform).toMatch(/translateY\((.*?)\)/);
+      }
+    });
+  });
+
+  it("has correct alt text for images", () => {
+    renderWithProvider();
+    const parallaxImages = screen.getAllByAltText("paper tear");
+
+    parallaxImages.forEach((image) => {
+      expect(image).toHaveAttribute("alt", "paper tear");
     });
   });
 });
