@@ -32,7 +32,7 @@ describe("App Component", () => {
 
   it("toggles parallaxEnabled state when NavBar toggle is clicked", () => {
     render(<App />);
-    const toggleButton = screen.getByRole("button", {
+    const onButton = screen.getByRole("button", {
       name: /parallax is on/i,
     });
 
@@ -51,14 +51,30 @@ describe("App Component", () => {
       }
     });
 
-    fireEvent.click(toggleButton);
+    fireEvent.click(onButton);
 
-    parallaxImages.forEach((img) => {
+    parallaxImages.forEach(async (img) => {
       const parallaxDivAfterToggle = img.parentNode;
       if (parallaxDivAfterToggle instanceof HTMLElement) {
-        expect(parallaxDivAfterToggle.style.transform).not.toMatch(
-          /translateY\((.*?)\)/
-        );
+        await waitFor(() => {
+          expect(parallaxDivAfterToggle.style.transform).not.toMatch(
+            /translateY\((.*?)\)/
+          );
+        });
+      }
+    });
+    const offButton = screen.getByRole("button", {
+      name: /parallax is off/i,
+    });
+    fireEvent.click(offButton);
+    parallaxImages.forEach(async (img) => {
+      const parallaxDivAfterToggle = img.parentNode;
+      if (parallaxDivAfterToggle instanceof HTMLElement) {
+        await waitFor(() => {
+          expect(parallaxDivAfterToggle.style.transform).toMatch(
+            /translateY\((.*?)\)/
+          );
+        });
       }
     });
   });
