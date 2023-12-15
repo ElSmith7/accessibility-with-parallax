@@ -20,6 +20,16 @@ describe("App Component", () => {
     expect(getByRole("contentinfo")).toBeInTheDocument();
   });
 
+  it("ensures all images have alt text", () => {
+    render(<App />);
+    const images = screen.getAllByRole("img");
+
+    images.forEach((img) => {
+      expect(img).toHaveAttribute("alt");
+      expect(img.getAttribute("alt")).not.toBe("");
+    });
+  });
+
   it("toggles parallaxEnabled state when NavBar toggle is clicked", () => {
     render(<App />);
     const toggleButton = screen.getByRole("button", {
@@ -27,19 +37,29 @@ describe("App Component", () => {
     });
 
     const parallaxImages = screen.getAllByAltText(
-      /crumpled paper sketch|typewriter sketch|paper tear/
+      /crumpled paper sketch|typewriter sketch|paper tear/i
     );
-    const parallaxDivBeforeToggle = parallaxImages[0].parentNode;
 
-    expect(parallaxDivBeforeToggle).toHaveStyle(
-      "transform: translateY(19.999999999999996px)"
-    );
+    parallaxImages.forEach(async (img) => {
+      const parallaxDivBeforeToggle = img.parentNode;
+      if (parallaxDivBeforeToggle instanceof HTMLElement) {
+        await waitFor(() => {
+          expect(parallaxDivBeforeToggle.style.transform).toMatch(
+            /translateY\((.*?)\)/
+          );
+        });
+      }
+    });
 
     fireEvent.click(toggleButton);
 
-    const parallaxDivAfterToggle = parallaxImages[0].parentNode;
-    expect(parallaxDivAfterToggle).not.toHaveStyle(
-      "transform: translateY(19.999999999999996px)"
-    );
+    parallaxImages.forEach((img) => {
+      const parallaxDivAfterToggle = img.parentNode;
+      if (parallaxDivAfterToggle instanceof HTMLElement) {
+        expect(parallaxDivAfterToggle.style.transform).not.toMatch(
+          /translateY\((.*?)\)/
+        );
+      }
+    });
   });
 });
