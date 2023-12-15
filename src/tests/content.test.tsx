@@ -50,4 +50,40 @@ describe("Content Component", () => {
       expect(image).toHaveAttribute("alt", "paper tear");
     });
   });
+
+  it("contains correct links to external resources", () => {
+    renderWithProvider();
+
+    const links = screen.getAllByRole("link");
+    expect(
+      links.some(
+        (link) =>
+          link instanceof HTMLAnchorElement &&
+          link.href ===
+            "https://www.nngroup.com/articles/parallax-usability/#:~:text=Summary%3A%20Parallax%2Dscrolling%20effects%20add,benefits%20are%20worth%20the%20cost."
+      )
+    ).toBe(true);
+    expect(
+      links.some(
+        (link) =>
+          link instanceof HTMLAnchorElement &&
+          link.href ===
+            "https://portal.gitnation.org/contents/thinking-differently-about-a11y-accessible-website-design-for-the-neurospicy"
+      )
+    ).toBe(true);
+    expect(
+      links.some(
+        (link) =>
+          link instanceof HTMLAnchorElement &&
+          link.href === "https://www.youtube.com/watch?v=SYu6wnZhrBU"
+      )
+    ).toBe(true);
+    expect(
+      links.some(
+        (link) =>
+          link instanceof HTMLAnchorElement &&
+          link.href === "https://www.w3.org/TR/WCAG22/"
+      )
+    ).toBe(true);
+  });
 });
